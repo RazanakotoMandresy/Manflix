@@ -1,0 +1,226 @@
+.icons {
+  color: #dedcdc;
+  margin: 25px;
+  font-size: 2.6vh;
+}
+.icons:hover {
+  font-size: 3vh;
+  padding: 2px;
+  background-color: #57707a;
+  border-radius: 50%;
+  color: #231f20;
+}
+.Navbar {
+  align-items: center;
+  background-color: #191d23;
+  width: 100%;
+  height: auto;
+}
+.Navbar ul li:not(.droite) {
+  align-items: center;
+  overflow: hidden;
+  display: inline;
+  float: left;
+}
+.Navbar .droite {
+  float: right;
+  align-items: center;
+  overflow: hidden;
+  display: inline;
+}
+.Navbar input {
+  border: none;
+  width: 25%;
+  background-color: #57707a;
+  padding: 5px;
+  border-radius: 25px;
+  text-align: center;
+}
+.Home {
+  margin-top: 7%;
+}
+.Home img {
+  max-width: 75%;
+  height: auto;
+  margin-left: 5%;
+}
+.colonne {
+  margin-top: 200px;
+  background-color: red;
+}
+.UnderNav {
+  overflow: hidden;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.UnderNav ul {
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 20%;
+  align-items: center;
+  overflow: hidden;
+  display: inline;
+  float: left;
+}
+.UnderNav ul li {
+  margin: 20px;
+  align-items: center;
+  overflow: hidden;
+  display: inline;
+  font-size: 1.9vh;
+}
+.colonnes h4 {
+  font-size: 2.5vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  text-transform: capitalize;
+}
+.colonnes p {
+  font-size: 1.5vh;
+  text-transform: capitalize;
+  text-align: justify;
+}
+
+.Login {
+  margin-top: 10%;
+  margin-left: 0%;
+  padding-top: 4%;
+  background-color: #57707a;
+  border-radius: 40px;
+}
+.Login:not(.Login-content) {
+  opacity: 0.9;
+}
+.Login-content {
+  text-transform: capitalize;
+  padding: 20%;
+  padding-top: 2%;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.Login-content h2 {
+  margin-left: -88px;
+}
+.Login-content p {
+  margin-top: 1.5%;
+  float: right;
+}
+.Login-content p a {
+  text-align: center;
+  color: #dedcdc;
+  font-size: 2vh;
+  margin-left: 10px;
+  text-decoration: none;
+  background-color: #231f20;
+  padding: 4px;
+}
+.Login-content p a:hover {
+  background-color: #223263;
+  color: #191d23;
+}
+.Login-content input {
+  border-color: none;
+  text-align: center;
+  background: none;
+  border: none;
+  border-bottom: #191d23 1px solid;
+  display: flex;
+  width: 100%;
+  margin-top: 7%;
+}
+.Login-content button {
+  margin-top: 2%;
+  background: none;
+  border: none;
+  width: 100%;
+  background-color: #c5bac4;
+  padding: 2%;
+}
+.Login-content button:hover {
+  background-color: #223263;
+  color: #191d23;
+}
+.head3 {
+  position: fixed;
+  font-size: 3vh;
+  top: 30%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.Choix {
+  top: 38%;
+}
+.Choix button {
+  color: azure;
+  background-color: #57707a;
+  margin: 10px;
+  display: flexbox;
+  font-size: 2vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+}
+.Choix .Simple {
+  color: azure;
+  background-color: #191d23;
+  margin-right: 72px;
+  display: flexbox;
+  font-size: 2vh;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  border: none;
+  padding: 10px;
+  border-radius: 25px;
+}
+.Choix button:hover {
+  background-color: #223263;
+}
+.Choix .Simple:hover {
+  background-color: #016450;
+  color: #231f20;
+}
+.Post .file {
+  display: none;
+}
+.Post {
+  margin-left: 25%;
+  margin-top: 12%;
+}
+.Post h2 {
+  margin-left: 20%;
+}
+.Post input {
+  display: flex;
+  border-radius: 20px;
+  background-color: #223263;
+  border: none;
+  padding: 10px;
+  width: 75%;
+  text-align: center;
+}
+.Post ul {
+  padding: 0;
+  margin-left: 20%;
+}
+.Post li {
+  font-size: 3vh;
+  align-items: center;
+  overflow: hidden;
+  display: inline;
+  margin-right: 10%;
+}
+.Post li:hover {
+  font-size: 4vh;
+}
+.Video {
+  margin-top: 10%;
+  margin-left: 10%;
+}
+.Video video {
+  width: 90%;
+  height: auto;
+  border-radius: 25px;
+} 
+.List img{
+width: 100%;
+height: 1000px;
+}
