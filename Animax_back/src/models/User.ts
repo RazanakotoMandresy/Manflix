@@ -5,7 +5,17 @@ interface IUser {
   name: string;
   email: string;
   passwords: string;
+  isCreator: boolean;
+  isPrenium: boolean;
   videos: Array<string>;
+  FollowedAccount: Array<string>;
+  Followers: Array<string>;
+  Notification: Array<notif>;
+}
+
+interface notif {
+  messages: string;
+  time: string;
 }
 const userSchema = new Schema<IUser>(
   {
@@ -25,7 +35,19 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
-    videos: Array,
+    videos: {
+      Array,
+      default: [],
+    },
+    FollowedAccount: Array,
+    Followers: Array,
+    isCreator: {
+      Boolean,
+    },
+    isPrenium: {
+      Boolean,
+    },
+    Notification: Array<notif>,
   },
   { timestamps: true }
 );
