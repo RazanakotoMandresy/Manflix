@@ -1,7 +1,7 @@
 import type { NextFunction, Request, Response } from "express";
 import jwt, { verify, type JwtPayload } from "jsonwebtoken";
 
-export interface CustomRequest extends Request {
+interface CustomRequest extends Request {
   token: string | JwtPayload;
 }
 export const signToken = (auth: any): string => {
@@ -12,17 +12,18 @@ export const signToken = (auth: any): string => {
   );
   return token;
 };
-export const verifyAuth = async (
+export const authentified = async (
   req: Request,
   res: Response,
   next: NextFunction
 ) => {
-  const authHeaders = req.headers.authorization;
-  if (!authHeaders || !authHeaders.startsWith("Bearer ")) {
-    return res.status(401).json({ msg: "invalid auth headers" });
-  }
-  const token = authHeaders.split(" ")[1];
   try {
+    const authHeaders = req.headers.authorization;
+    if (!authHeaders || !authHeaders.startsWith("Bearer ")) {
+      res.status(401).json({ msg: "invalid auth headers" });
+      return;
+    }
+    const token = authHeaders.split(" ")[1];
     const decode = verify(token, process.env.JWT_SECRET!);
     (req as CustomRequest).token = decode;
     next();
@@ -30,3 +31,4 @@ export const verifyAuth = async (
     res.status(401).json(error);
   }
 };
+    
