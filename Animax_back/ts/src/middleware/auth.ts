@@ -6,7 +6,11 @@ interface CustomRequest extends Request {
 }
 export const signToken = (auth: any): string => {
   const token = jwt.sign(
-    { userId: auth._id, userName: auth.name },
+    {
+      userId: auth._id,
+      userName: auth.name,
+      userAccountStatus: auth.isPrenium,
+    },
     process.env.JWT_SECRET!,
     { expiresIn: "31d" }
   );
@@ -31,4 +35,3 @@ export const authentified = async (
     res.status(401).json(error);
   }
 };
-    
