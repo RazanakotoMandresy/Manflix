@@ -1,21 +1,7 @@
 import { model, Schema } from "mongoose";
 import bcrypt from "bcryptjs";
+import type { IUser, Mess } from "../types/types";
 
-interface IUser {
-  name: string;
-  email: string;
-  passwords: string;
-  isPrenium: boolean;
-  StaredVideo: Array<string>;
-  FollowedPages: Array<string>;
-  Notification: Array<mess>;
-}
-
-interface mess {
-  // du genre new anime dandan hier op dimanche
-  text: string;
-  time: string;
-}
 const userSchema = new Schema<IUser>(
   {
     name: {
@@ -40,7 +26,7 @@ const userSchema = new Schema<IUser>(
     isPrenium: {
       Boolean,
     },
-    Notification: Array<mess>,
+    Notification: Array<Mess>,
   },
   { timestamps: true }
 );

@@ -6,7 +6,7 @@ const PORT = process.env.PORT;
 const app = express();
 
 app.use(express.json());
-app.use("/api/v1/", userRoutes);
+app.use("/api/v1/user", userRoutes);
 
 const start = async () => {
   console.log(`trying to start the server `);

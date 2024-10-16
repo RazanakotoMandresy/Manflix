@@ -1,3 +1,5 @@
+# just for dev prupose
+# so no need the data to be stored
 clean:
 	@docker container stop  mongo_animax && docker container rm  mongo_animax
 run: 
