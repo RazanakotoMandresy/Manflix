@@ -20,8 +20,9 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
+    // video uuid
     StaredVideo: Array<String>,
-    // TODO changing  String with pages and videos type rehefa vita
+    // UUID
     FollowedPages: Array<String>,
     isPrenium: {
       Boolean,
