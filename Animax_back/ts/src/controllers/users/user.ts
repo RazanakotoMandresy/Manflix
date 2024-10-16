@@ -22,7 +22,7 @@ export const login = async (req: Request, res: Response) => {
       res.status(401).json({ err: "incrorrect passwords" });
       return;
     }
-    const token = signToken(user);
+    const token = signToken(user._id, user.name, user.isPrenium);
     if (token == "") {
       res.status(500).json({ err: "an error occured during token's creation" });
       return;
@@ -57,7 +57,8 @@ export const register = async (req: Request, res: Response) => {
       return;
     }
     const auth = await User.create(body);
-    const token = signToken(auth);
+
+    const token = signToken(auth._id, auth.name, auth.isPrenium);
     res.status(200).json({ res: token, user: auth });
     return;
   } catch (error) {

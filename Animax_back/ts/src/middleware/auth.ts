@@ -1,15 +1,25 @@
 import type { NextFunction, Request, Response } from "express";
 import jwt, { verify, type JwtPayload } from "jsonwebtoken";
-
+import type { Types } from "mongoose";
 interface CustomRequest extends Request {
   token: string | JwtPayload;
 }
-export const signToken = (auth: any): string => {
+// Document<unknown, {}, IUser> &
+// IUser & {
+//   _id: Types.ObjectId;
+// } & {
+//   __v?: number;
+// },
+export const signToken = (
+  authId: Types.ObjectId,
+  authName: string,
+  authPrenium: boolean
+): string => {
   const token = jwt.sign(
     {
-      userId: auth._id,
-      userName: auth.name,
-      userAccountStatus: auth.isPrenium,
+      userId: authId,
+      userName: authName,
+      userAccountStatus: authPrenium,
     },
     process.env.JWT_SECRET!,
     { expiresIn: "31d" }
