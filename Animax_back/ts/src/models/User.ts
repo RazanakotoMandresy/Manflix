@@ -5,15 +5,14 @@ interface IUser {
   name: string;
   email: string;
   passwords: string;
-  isCreator: boolean;
   isPrenium: boolean;
-  videos: Array<string>;
-  FollowedAccount: Array<string>;
-  Followers: Array<string>;
+  StaredVideo: Array<string>;
+  FollowedPages: Array<string>;
   Notification: Array<notif>;
 }
 
 interface notif {
+  // du genre new anime dandan hier op dimanche
   messages: string;
   time: string;
 }
@@ -35,15 +34,9 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
-    videos: {
-      Array,
-      default: [],
-    },
-    FollowedAccount: Array,
-    Followers: Array,
-    isCreator: {
-      Boolean,
-    },
+    StaredVideo: Array<string>,
+    // TODO changing  string with pages and videos type rehefa vita
+    FollowedPages: Array<string>,
     isPrenium: {
       Boolean,
     },
