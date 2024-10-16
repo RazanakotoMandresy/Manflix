@@ -8,12 +8,12 @@ interface IUser {
   isPrenium: boolean;
   StaredVideo: Array<string>;
   FollowedPages: Array<string>;
-  Notification: Array<notif>;
+  Notification: Array<mess>;
 }
 
-interface notif {
+interface mess {
   // du genre new anime dandan hier op dimanche
-  messages: string;
+  text: string;
   time: string;
 }
 const userSchema = new Schema<IUser>(
@@ -34,13 +34,13 @@ const userSchema = new Schema<IUser>(
       type: String,
       required: true,
     },
-    StaredVideo: Array<string>,
-    // TODO changing  string with pages and videos type rehefa vita
-    FollowedPages: Array<string>,
+    StaredVideo: Array<String>,
+    // TODO changing  String with pages and videos type rehefa vita
+    FollowedPages: Array<String>,
     isPrenium: {
       Boolean,
     },
-    Notification: Array<notif>,
+    Notification: Array<mess>,
   },
   { timestamps: true }
 );
